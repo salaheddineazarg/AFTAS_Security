@@ -1,0 +1,62 @@
+<section class="px-4 w-full flex flex-col gap-10 py-8 h-auto bg-indigo-50 ">
+<div class="flex gap-4 justify-between  ">
+  <div class=" w-[580px]  bg-white h-[240px] px-5 pt-5 pb-1 rounded-xl shadow-lg transform  transition duration-500">
+    <div class=" flex gap-5 relative ">
+      <div  class="rounded-2xl  bg-purple-700 flex justify-center items-center w-[280px] h-[200px]">
+        <h1 class="text-5xl font-black text-white">{{competition.location.slice(0,3).toUpperCase()}}</h1>
+      </div>
+      <div class="my-4 space-y-3">
+        <h1 class="mt-4 text-gray-800 text-xl font-bold cursor-pointer">{{competition.location}}</h1>
+        <div class="flex space-x-1 items-center">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></span>
+          <p>{{competition.startTime}}</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span><svg class="fill-indigo-600 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M57,44h-6h-6c-3.3,0-6,2.7-6,6v9c0,1.1,0.5,2.1,1.2,2.8c0.7,0.7,1.7,1.2,2.8,1.2v9c0,3.3,2.7,6,6,6h2h2 c3.3,0,6-2.7,6-6v-9c1.1,0,2.1-0.4,2.8-1.2c0.7-0.7,1.2-1.7,1.2-2.8v-9C63,46.7,60.3,44,57,44z"></path> </g> <g> <circle cx="51" cy="33" r="7"></circle> </g> <g> <path d="M36.6,66.7c-0.2-0.2-0.5-0.4-0.7-0.6c-1.9-2-3-4.5-3-7.1v-9c0-3.2,1.3-6.2,3.4-8.3c0.6-0.6,0.1-1.7-0.7-1.7 c-1.7,0-3.6,0-3.6,0h-6c-3.3,0-6,2.7-6,6v9c0,1.1,0.5,2.1,1.2,2.8c0.7,0.7,1.7,1.2,2.8,1.2v9c0,3.3,2.7,6,6,6h2h2 c0.9,0,1.7-0.2,2.4-0.5c0.4-0.2,0.6-0.5,0.6-0.9c0-1.2,0-4,0-5.1C37,67.2,36.9,66.9,36.6,66.7z"></path> </g> <g> <circle cx="32" cy="29" r="7"></circle> </g> <g> <path d="M76,40h-6c0,0-1.9,0-3.6,0c-0.9,0-1.3,1-0.7,1.7c2.1,2.2,3.4,5.1,3.4,8.3v9c0,2.6-1,5.1-3,7.1 c-0.2,0.2-0.4,0.4-0.7,0.6c-0.2,0.2-0.4,0.5-0.4,0.8c0,1.1,0,3.8,0,5.1c0,0.4,0.2,0.8,0.6,0.9c0.7,0.3,1.5,0.5,2.4,0.5h2h2 c3.3,0,6-2.7,6-6v-9c1.1,0,2.1-0.4,2.8-1.2c0.7-0.7,1.2-1.7,1.2-2.8v-9C82,42.7,79.3,40,76,40z"></path> </g> <g> <circle cx="70" cy="29" r="7"></circle> </g> </g> </g></svg></span>
+          <p> {{competition.numberOfParticipants}} Member</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span><svg class="w-6 h-6 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 10V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V10M20 10V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V10M20 10H4M8 3V7M16 3V7" stroke="#4f46e2" stroke-width="2" stroke-linecap="round"></path> <rect x="6" y="12" width="3" height="3" rx="0.5" fill="#4f46e2"></rect> <rect x="10.5" y="12" width="3" height="3" rx="0.5" fill="#4f46e2"></rect> <rect x="15" y="12" width="3" height="3" rx="0.5" fill="#4f46e2"></rect> </g></svg></span>
+          <p>{{competition.date}}</p>
+        </div>
+      </div>
+      <svg (click)="getPodium(competition.code)" class="w-10 shadow-2xl cursor-pointer absolute right-0 top-[86%] h-10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="163.671" y="104.968" style="fill:#003cf0;" width="184.662" height="302.057"></rect> <rect y="196.829" style="fill:#fb5dfe;" width="163.671" height="210.196"></rect> <rect x="348.333" y="223.084" style="fill:#54a8e8;" width="163.671" height="183.952"></rect> <path style="opacity:0.2;enable-background:new ;" d="M491.587,223.081v107.143c0,31.145-25.247,56.392-56.392,56.392h-86.865 v20.413H512V223.081H491.587z"></path> <path style="opacity:0.2;enable-background:new ;" d="M143.257,196.834v133.39c0,31.145-25.247,56.392-56.392,56.392H0v20.413 h163.67V196.834H143.257z"></path> <polygon style="fill:#b7e6fb;" points="246.025,233.297 228.431,233.297 228.431,260.34 246.025,260.34 246.025,335.602 273.067,335.602 273.067,260.34 273.067,233.297 "></polygon> <path style="fill:#FFFFFF;" d="M112.454,275.868c0-8.478-6.873-15.351-15.351-15.351H85.411H51.216v27.042h26.978 c3.431,0,5.753,3.493,4.428,6.657l-28.755,68.605h22.87h4.172h15.773h15.773v-27.042H96.682h-4.438l17.998-42.941 c1.461-3.485,2.213-7.225,2.213-11.003v-5.967H112.454z"></path> <polygon style="fill:#2a00c2;" points="415.032,305.877 415.032,324.233 428.481,324.233 428.481,339.165 406.358,339.165 406.358,366.208 428.481,366.208 451.327,366.208 455.524,366.208 455.524,290.944 455.524,263.902 428.481,263.902 404.807,263.902 404.807,290.944 428.481,290.944 428.481,305.877 "></polygon> <path style="fill:#b7e6fb;" d="M191.783,204.667c-4.326,0-7.833-3.506-7.833-7.833v-62.306c0-4.327,3.507-7.833,7.833-7.833h51.905 c4.326,0,7.833,3.506,7.833,7.833c0,4.327-3.507,7.833-7.833,7.833h-44.073v54.473C199.616,201.161,196.109,204.667,191.783,204.667 z"></path> <path style="opacity:0.27;fill:#664400;enable-background:new ;" d="M327.665,104.971v222.394 c0,32.584-26.414,58.997-58.997,58.997H163.67v20.666h184.661V104.971H327.665z"></path> </g></svg>
+    </div>
+
+  </div>
+  <app-rank #RankComponent   id="style-7" class="w-[44%] relative shadow-inner  h-[240px]  overflow-auto"></app-rank>
+
+</div>
+  <app-member  (num)="getNum($event)"></app-member>
+
+  <div *ngIf="podium.length>0" [ngClass]="{'animation':displayPodium,'top-[120%]':!displayPodium}" class="fixed  bg-black/50 w-full h-full">
+    <button   type="button" class=" absolute left-100 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span class="sr-only">Close modal</span>
+    </button>
+    <div class="flex flex-col absolute text-center left-[245px] top-[184px]" >
+      <h4 class="font-bold  text-white text-">{{podium[1].member.name }}</h4>
+      <div class="bg-purple-700 shadow-inner rounded-tl-md rounded-tr-md flex justify-center items-center h-[220px] w-[140px]">
+        <h4 class="font-bold text-4xl text-white">2</h4>
+      </div>
+      <h4 class="font-bold  text-white text-">{{podium[1].score }}</h4>
+    </div>
+    <div class="flex flex-col absolute left-[30%] text-center top-[114px]" >
+      <h4 class="font-bold  text-white text-">{{podium[0].member.name }}</h4>
+      <div class="bg-indigo-600 shadow-inner rounded-tl-md rounded-tr-md flex justify-center items-center h-[290px] w-[140px]">
+        <h4 class="font-bold text-4xl text-white">1</h4>
+      </div>
+      <h4 class="font-bold  text-white text-">{{podium[0].score }}</h4>
+    </div>
+    <div class="flex flex-col absolute  text-center left-[524px] top-[224px]" >
+      <h4 class="font-bold  text-white ">{{podium[2].member.name }}</h4>
+      <div class="bg-indigo-900 shadow-inner rounded-tl-md rounded-tr-md flex justify-center items-center h-[180px] w-[140px]">
+        <h4 class="font-bold text-4xl text-white">3</h4>
+      </div>
+      <h4 class="font-bold  text-white ">{{podium[2].score }}</h4>
+    </div>
+
+  </div>
+</section>
